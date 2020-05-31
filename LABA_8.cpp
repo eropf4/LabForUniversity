@@ -8,6 +8,7 @@ using namespace std;
 constexpr int N = 1000;
 constexpr int M = 100;
 
+
 int Search(const int* array, int size, int value) 
 {
     for (int i = 0; i < size; ++i)
