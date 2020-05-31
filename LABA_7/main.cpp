@@ -24,6 +24,7 @@ void printTree(TreeNode* root, int space)
     printTree(root->GetLeftNode(), space);
 }
 
+
 TreeNode* CreateMinimalBST(const int* arr, const int begin, const int end)
 {
     if (end < begin)
