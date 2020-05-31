@@ -13,6 +13,7 @@ void Matrix3x3::setElement(const int i, const int j, const int value)
 	matrix[i][j] = value;
 }
 
+
 void Matrix3x3::fillRandomElements(const int minVal, const int maxVal)
 {
 	srand(time(0));
