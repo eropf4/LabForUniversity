@@ -34,6 +34,7 @@ void Sort(int* st, int* end)
 
 
 
+
 int main()
 {
 	int arr[] = { 8, 4, 0, 123, 1234, 672, 1 };
