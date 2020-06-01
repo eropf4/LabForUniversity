@@ -16,6 +16,7 @@ int findMin(int* startObject, int* endObject)
 }
 
 
+
 void findElement(int* startObject, int* endObject) 
 {
 	for (int i = 1; i < (endObject - startObject + 1); i++) {
