@@ -48,7 +48,6 @@ void QuickSort(int* arr, int first, int last)
         QuickSort(arr, left, last);
     }
 }
-
 void Transposition(int* a, int* b)
 {
     int t = *a;
