@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <time.h>
 #include <random>
 #include <chrono>
@@ -144,13 +144,13 @@ int main()
     int arr4[N];
 
     RandomArrayFill(arr2, M, -10, 10);
-    PrintFirst(arr2, 100, "Numbers: ");
+    PrintFirst(arr2, 100, "Numbers(random from -10 to 10): ");
     QuickSort(arr2, 0, M - 1);
     PrintFirst(arr2, 100, "Quicksort: ");
 
     RandomArrayFill(arr2, M, -10, 10);
     NotRecursiveQuickSort(arr2, 0, M - 1);
-    PrintFirst(arr2, 100, "Not recusive quicksort: ");
+    PrintFirst(arr2, 100, "Not recusive quicksort(first 100 element from Random Number): ");
 
     cout << BSearch(arr3, 1, 0, 4) << endl;
     cout << NotRecursiveBSearch(arr3, 5, 0, 4) << endl;
@@ -163,7 +163,7 @@ int main()
 
     QuickSort(arr4, 0, N - 1);
 
-    PrintFirst(arr4, 100, "Sorted: ");
+    PrintFirst(arr4, 100, "Sorted(quicksort 1000 elements, random from -10 to 10): ");
 
     auto beginRecursiveBinarySearch = std::chrono::steady_clock::now();
     BSearch(arr4, 8, 0, N - 1);
@@ -177,5 +177,7 @@ int main()
     auto linearSearchTime = std::chrono::duration_cast<std::chrono::nanoseconds>(endLinearSearch - beginLinearSearch).count();
     auto notRecursiveBinarySearchTime = std::chrono::duration_cast<std::chrono::nanoseconds>(endNotRecursiveBinarySearch - beginNotRecursiveBinarySearch).count();
 
-    std::cout<< endl << "Time : Linear search,Recursive binary search, Not recursive binary search = " << linearSearchTime << ", " << recursiveBinarySearchTime << ", " << notRecursiveBinarySearchTime << " ns";
+    std::cout << "Linear search time(search 8 in array of 1000 elements) " << linearSearchTime << " ns" << endl;
+    std::cout << "Recursive binary search time(search 8 in array of 1000 elements) " << recursiveBinarySearchTime << " ns" << endl;
+    std::cout << "Not recursive binary search time(search 8 in array of 1000 elements) " << notRecursiveBinarySearchTime << " ns" << endl;
 }
